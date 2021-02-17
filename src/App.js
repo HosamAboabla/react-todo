@@ -1,6 +1,7 @@
 import './App.css';
 import Form from './components/Form'
 import TodoList from './components/TodoList'
+import Footer from './components/Footer'
 import React , {useState , useEffect } from 'react'
 
 function App() {
@@ -50,10 +51,11 @@ function App() {
   return (
     <div>
       <header>
-        <h1>Hosam's Todo List</h1>
+        <h1>Your Todo List</h1>
       </header>
       <Form setStatus={setStatus} setInputText ={setInputText} inputText = {inputText} todos={todos} setTodos = {setTodos} />
       <TodoList filteredTodos={filteredTodos} todos={todos} setTodos={setTodos} />
+      <Footer />
     </div>
   );
 }
